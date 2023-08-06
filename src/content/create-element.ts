@@ -1,7 +1,10 @@
-export function createReferenceLink(title: string) {
-    const link = document.createElement('a');
-    link.title = title;
-    link.href = 'https://www.google.com';
-    link.textContent = '🔍';
-    return link;
+import './style.css';
+
+export function createReferenceLink(title: string, reference: string) {
+    const linkEl = document.createElement('a');
+    linkEl.className = 'keywordone-reference-link';
+    linkEl.title = title;
+    linkEl.href = reference;
+    linkEl.textContent = '🔗';
+    return linkEl;
 }

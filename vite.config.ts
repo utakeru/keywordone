@@ -6,7 +6,7 @@ const manifest = defineManifest({
   manifest_version: 3,
   name: "keywordone",
   version: "1.0.0",
-  permissions: [],
+  permissions: ["storage"],
   action: {
     default_popup: "index.html",
   },
@@ -14,9 +14,10 @@ const manifest = defineManifest({
     {
       matches: ["<all_urls>"],
       //matches: ["https://*.cybozu.com/k/*", "https://*.cybozu.cn/k/*", "https://*.kintone.com/k/*"],
-      js: ["src/content/main.ts"]
+      js: ["src/content/index.ts"]
     }
-  ]
+  ],
+  options_page: "src/option/index.html",
 });
 
 // https://vitejs.dev/config/
